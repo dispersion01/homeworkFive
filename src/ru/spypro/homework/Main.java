@@ -34,12 +34,19 @@ public class Main {
 
     public static void exerciseTwo(){ // максимальное и минимальное число
         System.out.println("Задача 2: ");
-        int[] sumArray = generateRandomArray();
-        int maxNum = sumArray[0];
-        int minNum = 0;
-        for (int i = 0; i<sumArray.length; i++) {
-           if (maxNum == Math.max(maxNum, sumArray[i]));
-            System.out.println(maxNum);
+        int[] array = generateRandomArray();
+        int min = generateRandomArray()[0];
+        int max = generateRandomArray().length - 1;
+        for (int i = 0; i < array.length; i++) {
+            if (generateRandomArray()[i] < min) {
+                min = generateRandomArray()[i];
+                System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
+            } else {
+                if (generateRandomArray()[i] > max) {
+                    max = generateRandomArray()[i];
+                    System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
+                }
+            }
         }
     }
 
