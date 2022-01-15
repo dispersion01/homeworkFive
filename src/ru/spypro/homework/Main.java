@@ -18,16 +18,17 @@ public class Main {
 	// write your code here
         int[] arr = generateRandomArray();
        // exerciseOne();
-        exerciseTwo();
-        //exerciseThree();
+        //exerciseTwo();
+        exerciseThree();
         //exerciseFour();
         }
 
     public static void exerciseOne(){ // сумма случайных чисел 30 раз
         System.out.println("Задача 1: ");
         int arraySum = 0;
-        for(int a = 0;  a < generateRandomArray().length; a++ ) {
-            arraySum = arraySum + generateRandomArray()[a];
+        int[] arr = generateRandomArray();
+        for(int a = 0;  a < arr.length; a++ ) {
+            arraySum = arraySum + arr[a];
         }
         System.out.println("Сумма трат за месяц составила " + arraySum + " рублей");
     }
@@ -56,9 +57,10 @@ public class Main {
         double generalSum = 0;
         for(int i =0; i<averageArray.length; i++){
             generalSum = generalSum + averageArray[i];
-            double averageSum = generalSum / averageArray.length;
-            System.out.println("Средняя сумма трат за месяц составила " + averageSum + " рублей");
+
         }
+        double averageSum = generalSum / averageArray.length;
+        System.out.println("Средняя сумма трат за месяц составила " + averageSum + " рублей");
     }
 
     public static void exerciseFour(){  // в обратном порядке массив
