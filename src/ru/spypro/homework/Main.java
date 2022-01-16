@@ -16,10 +16,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        int[] arr = generateRandomArray();
+        //int[] arr = generateRandomArray();
        // exerciseOne();
         //exerciseTwo();
-        exerciseThree();
+        //exerciseThree();
         //exerciseFour();
         }
 
@@ -27,24 +27,24 @@ public class Main {
         System.out.println("Задача 1: ");
         int arraySum = 0;
         int[] arr = generateRandomArray();
-        for(int a = 0;  a < arr.length; a++ ) {
+        for(int a = 0; a < arr.length; a++ ) {
             arraySum = arraySum + arr[a];
         }
         System.out.println("Сумма трат за месяц составила " + arraySum + " рублей");
     }
 
-    public static void exerciseTwo(){ // максимальное и минимальное число
+    public static void exerciseTwo() { // максимальное и минимальное число
         System.out.println("Задача 2: ");
         int[] array = generateRandomArray();
-        int min = generateRandomArray()[0];
-        int max = generateRandomArray().length - 1;
+        int min = array[0];
+        int max = array.length - 1;
         for (int i = 0; i < array.length; i++) {
-            if (generateRandomArray()[i] < min) {
-                min = generateRandomArray()[i];
+            if (array[i] < min) {
+                min = array[i];
                 System.out.println("Минимальная сумма трат за день составила " + min + " рублей");
             } else {
-                if (generateRandomArray()[i] > max) {
-                    max = generateRandomArray()[i];
+                if (array[i] > max) {
+                    max = array[i];
                     System.out.println("Максимальная сумма трат за день составила " + max + " рублей");
                 }
             }
